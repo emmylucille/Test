@@ -1,43 +1,3 @@
-// (function() {
-// "use strict";
-//
-//   function Cat(name) {
-//     http://this.name = name || 'Milo';
-// }
-//
-// window.Cat = Cat;
-//
-//   Cat.prototype = {
-//     eats: function(target) {
-//       if (!target)
-//         throw new Error('missing target');
-//       return http://this.name + ' eats ' + target;
-//     }
-//   };
-// })(this);
-//
-//
-// //another example
-// (function() {
-//   _ = {};
-//   _.firstTwo = function(array) {
-//     if (!array) {
-//       throw new Error("_.firstTwo must be given an argument.")
-//     } else if (!Array.isArray(array)) {
-//       throw new Error("_firstssTwo must be given an array as an argument.")
-//     } else {
-//       return array.slice(-2);
-//     }
-//   }
-// })(this);
-
-//     it('should throw an error when given no argument'), function(){
-//       expect(_.lastTwo()).to.throw(Error);
-//     });
-//   });
-// })();
-
-
 (function () {
   'use strict';
 
@@ -50,12 +10,12 @@
     });
     describe('it should only accept an array', function () {
       it('should throw an error when it is not an array', function () {
-        var food = {dinner: 'chili', dessert: 'cake'};
+        var food = !Array;
         expect(_.first(food)).to.equal(undefined);
       });
     });
     describe('it needs to be given an argument', function () {
-      it('should throw an error when its given no argument', function () {
+      it('should throw an error when it is not given an argument', function () {
         var food = ['beans', 'rice', 'turkey', 'spice'];
         expect(_.first()).to.equal(undefined);
       });
@@ -75,12 +35,12 @@
     });
     describe('it should only accept an array', function () {
       it('should throw an error when it is not an array', function () {
-        var food = {dinner: 'chili', dessert: 'cake'};
+        var food = !Array;
         expect(_.last(food)).to.equal(undefined);
       });
     });
     describe('it needs to be given an argument', function () {
-      it('should throw an error when its given no argument', function () {
+      it('should throw an error when it is not given an argument', function () {
         var food = ['beans', 'rice', 'turkey', 'spice'];
         expect(_.last()).to.equal(undefined);
       });
@@ -100,15 +60,49 @@
     });
     describe('it should only accept an array', function () {
       it('should throw an error when it is not an array', function () {
-        var food = [{dinner: 'chili', dessert: 'cake'}, {dinner: 'tacos', dessert: 'brownies'}];
+        var food = !Array;
         expect(_.pluck(food)).to.not.equal([]);
       });
     });
     describe('it needs to be given an argument', function () {
-      it('should throw an error when its given no argument', function () {
+      it('should throw an error when it is not given an argument', function () {
         var food = ['beans', 'rice', 'turkey', 'spice'];
         expect(_.pluck()).to.not.equal([]);
       });
     });
   });
 })();
+
+//EXAMPLE
+// (function() {
+// "use strict";
+//
+//   function Cat(name) {
+//     http://this.name = name || 'Milo';
+// }
+//
+// window.Cat = Cat;
+//
+//   Cat.prototype = {
+//     eats: function(target) {
+//       if (!target)
+//         throw new Error('missing target');
+//       return http://this.name + ' eats ' + target;
+//     }
+//   };
+// })(this);
+//
+//
+// //Made everything fo crazy!
+// (function() {
+//   _ = {};
+//   _.firstTwo = function(array) {
+//     if (!array) {
+//       throw new Error("_.firstTwo must be given an argument.")
+//     } else if (!Array.isArray(array)) {
+//       throw new Error("_firstssTwo must be given an array as an argument.")
+//     } else {
+//       return array.slice(-2);
+//     }
+//   }
+// })(this);
